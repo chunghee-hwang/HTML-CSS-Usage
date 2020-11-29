@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+ol{
+    list-style:none;
+}
+body, ol{
+    margin: 0;
+    padding: 0;
+}
+
+.wrap{
+    position: relative;
+    background: url(bg_big3_evt.png) no-repeat 0 0;
+    width: 1020px;
+    height: 643px;
+    margin: 0 auto;
+}
+
+.blind{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.link_point{
+    position: absolute;
+    left: 105px;
+    bottom: 100px;
+    width: 120px;
+    height: 16px;
+}
+.link_join{
+    position: absolute;
+    bottom: 0px;
+    left: 340px;
+    width: 340px;
+    height: 70px;
+}
