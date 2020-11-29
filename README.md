@@ -4,4 +4,4 @@
 
 ## 코드 목록
 * [CSS 리셋](./css-reset)
-* [Image Replacement 기법](./css-reset)
+* [Image Replacement 기법](./IR)
