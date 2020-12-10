@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body,
+    .wrap {
+      /*최상위 높이가 100%여야 자식 태그에 100% 적용 가능*/
+      height: 100%;
+    }
+
+    .header {
+      height: 100px;
+      background-color: lightgreen;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      min-height: 100%;
+      /*높이를 줄였을 때 content,aside가 footer랑 겹치지 않게 함*/
+      margin: -100px auto;
+      padding: 100px 0;
+      /*padding과 border값이 너비, 높이에 포함되지 않도록 하는 요소*/
+      box-sizing: border-box;
+    }
+
+    .container:after {
+      display: block;
+      clear: left;
+      content: '';
+    }
+
+    .content {
+      float: left;
+      width: 500px;
+      height: 300px;
+      background-color: lightsalmon;
+      box-sizing: border-box;
+    }
+
+    .aside {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: lightseagreen;
+    }
+
+    .aside:after {
+      content: '';
+      position: absolute;
+      right: 300px;
+      top: 100px;
+      bottom: 100px;
+      width: 5px;
+      background-color: #000;
+    }
+
+    .footer {
+      height: 100px;
+      background-color: cornflowerblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      header
+    </div>
+    <div class="container">
+      <div class="content">
+        content
+      </div>
+      <div class="aside">
+        aside
+      </div>
+    </div>
+    <div class="footer">
+      footer
+    </div>
+  </div>
+</body>
+
+</html>
