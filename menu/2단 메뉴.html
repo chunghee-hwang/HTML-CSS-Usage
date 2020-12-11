@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: '나눔고딕', NanumGothic, Dotum, '돋움', sans-serif;
+    }
+
+    body,
+    ul,
+    ol,
+    li,
+    div,
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .menu {
+      width: 700px;
+      margin: 20px auto 0;
+      text-align: center;
+    }
+
+    .menu-item {
+      display: inline-block;
+    }
+
+    .menu-link {
+      display: block;
+      padding: 13px 20px;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .menu-item:hover .menu-link,
+    .menu-item.active .menu-link {
+      color: green;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      min-width: 700px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu-item.active .submenu {
+      display: block;
+    }
+
+    .submenu-item {
+      display: inline-block;
+    }
+
+    .submenu-link {
+      display: block;
+      padding: 15px 35px;
+      font-size: 17px;
+      line-height: 20px;
+      color: #333;
+    }
+
+    .submenu-item:hover .submenu-link,
+    .submenu-item.active .submenu-link {
+      font-weight: bold;
+      color: green;
+    }
+
+    .submenu-link span {
+      position: relative;
+    }
+
+    .submenu-item:hover span:after,
+    .submenu-item.active span:after {
+      position: absolute;
+      content: '';
+      right: 0;
+      bottom: -10px;
+      left: 0;
+      border-bottom: 2px solid green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul class="menu">
+      <li class="menu-item">
+        <a href="#" class="menu-link">웹툰</a>
+        <ul class="submenu">
+          <li class="submenu-item active">
+            <a href="#" class="submenu-link"><span>요일별</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>장르별</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>작가별</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>연도별</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>작품별</span></a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link">블로그</a>
+      </li>
+      <li class="menu-item active">
+        <a href="#" class="menu-link">지식백과</a>
+        <ul class="submenu">
+          <li class="submenu-item active">
+            <a href="#" class="submenu-link"><span>건강</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>밀리터리</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>음식백과</span></a>
+          </li>
+          <li class="submenu-item">
+            <a href="#" class="submenu-link"><span>동물백과</span></a>
+          </li>
+        </ul>
+      </li>
+      <li class="menu-item">
+        <a href="#" class="menu-link">카페</a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
