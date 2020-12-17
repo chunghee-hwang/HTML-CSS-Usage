@@ -21,3 +21,7 @@
 * 표
   - [간단한 통계표](./table/통계표.html)
   - [달력](./table/달력.html)
+* 팝업
+  - [내용이 고정되어있는 레이어팝업(position:absolute, margin:auto)](./popup/layerpopup.html)
+  - [내용이 변할 수 있는 레이어팝업(display:inline-block | text-align:center, vertical-align:center)](./popup/layerpopup2.html)
+  - [내용이 변할 수 있는 레이어팝업(display:table | table-cell)](./popup/layerpopup3.html)
