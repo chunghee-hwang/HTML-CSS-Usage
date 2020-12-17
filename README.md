@@ -18,3 +18,6 @@
 * 이미지 리스트
   - [간단한 이미지 리스트](./image-list/simple-image-list)
   - [기능이 추가된 이미지 리스트](./image-list/complicate-image-list)
+* 표
+  - [간단한 통계표](./table/통계표.html)
+  - [달력](./table/달력.html)
