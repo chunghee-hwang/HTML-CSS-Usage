@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .text_form{
+      width: 198px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+    .text_form input{
+      height: 20px;
+      line-height: 20px;
+      padding: 0;
+      border: 0 none;
+      font-size: 15px;
+    }
+
+    /*[type=text]: type이 text인 input 찾기*/
+    .text_form input[type=text]::placeholder
+    { 
+      color: red;
+      opacity: 1; /*Firefox 대응*/
+    }
+
+    /*Internet Explorer 대응*/
+    .text_form input[type=text]:-ms-placeholder{
+      color: red;
+    }
+
+    /*Edge 대응*/
+    .text_form input[type=text]::-ms-placeholder{
+      color: red;
+    }
+  
+    .text_form input[type=password]::placeholder
+    { 
+      color: blue;
+      opacity: 1;
+    }
+
+    .text_form input[type=password]:-ms-placeholder{
+      color: blue;
+    }
+
+    .text_form input[type=password]::-ms-placeholder{
+      color: blue;
+    }
+
+    .textarea{
+      width: 300px;
+      height: 150px;
+      margin-top: 20px;
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    .textarea textarea{
+      width: 100%;
+      height:100%;
+      border: 0 none;
+      padding: 0;
+      resize: none; /*사이즈 변화 막기*/
+    }
+
+    .textarea textarea::placeholder{
+      color: purple;
+    }
+    .text_form textarea:-ms-placeholder{
+      color: purple;
+    }
+    .text_form textarea::-ms-placeholder{
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <div class="text_form">
+    <input type="text" name="" value="" placeholder="이름을 입력하세요">
+  </div>
+  <div class="text_form">
+    <input type="password" name="" value="" placeholder="암호를 입력하세요">
+  </div>
+  <div class="textarea">
+    <textarea name="" rows="8" cols="80" placeholder="암호를 입력하세요"></textarea>
+  </div>
+</body>
+</html>
