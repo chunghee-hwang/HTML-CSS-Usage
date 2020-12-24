@@ -1,0 +1,204 @@
+@charset "UTF-8";
+a{
+  text-decoration: none;
+}
+header{
+  overflow: hidden;
+  background-color: pink;
+  padding: 20px;
+}
+
+.logo{
+  float: left;
+  font-size: 20px;
+  color: #fff;
+}
+nav{
+  float: right;
+}
+
+nav a{
+  padding: 0 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.gnb_menu{
+  display: none;
+}
+
+footer{
+  height: 50px;
+  line-height: 50px; 
+  text-align: center;
+  background-color: #ccc;
+  font-size: 14px;
+  color: #000;
+}
+
+section{
+  overflow: hidden;
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+.list{
+  margin: -5px; /*ul의 기본 margin 없애기*/
+  overflow: hidden;
+}
+.list li{
+  float: left;
+  width: 20%;
+}
+.inner{
+  display: block;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+.thumb img{
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.title{
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  padding: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+width
+0px ---- mobile ------ tablet ---- pc
+*/
+
+/*태블릿 미디어쿼리 */ 
+@media screen and (max-width: 768px), 
+/*가로 모드를 돌렸을 때도 태블릿 모드가 적용되게끔 조건 추가*/
+screen and (max-height: 768px) and (orientation: landscape)
+{
+  header{
+    background-color: lightseagreen;
+  }
+  .logo{
+    width: 100px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+    text-align: center;
+  }
+  nav{
+    margin-top: 20px;
+    float: none;
+
+    /*좌우 스크롤 기능*/
+    white-space: nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+  }
+  nav a{
+    font-size: 25px;
+  }
+  footer{
+    background-color: lightcoral;
+    color:#fff;
+  }
+  .list{
+    margin: -4px;
+  }
+  .list li{
+    width: 25%;
+  }
+  .inner{
+    position: relative;
+    margin: 4px;
+  }
+  .title{
+    position: absolute;
+    left: 0; right: 0; bottom:0;
+    padding: 10px 0;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+  }
+}
+
+/*모바일 미디어쿼리*/
+@media screen and (max-width: 375px),
+/*가로 모드일때도 모바일 모드 적용*/
+screen and (max-height:375px) and (orientation: landscape)
+{
+  header{
+    padding: 10px 0;
+  }
+  nav{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+    width: 200px;
+    margin: 0;
+    background-color: lightslategray;
+  }
+  nav a{
+    display:block;
+    padding: 20px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+  }
+  .gnb_menu{
+    position:absolute;
+    top:12px;
+    left: 12px;
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    font-size: 1px;
+    color: transparent;
+    /*햄버거 버튼 모양 만들기*/
+    /* 반복을 어떻게 할것인지: 흰색 높이 10*0.5px 투명색 10*0.5px*/
+    background: linear-gradient(#fff 50%, transparent 50%);
+    background-size: 100% 10px; /*반복할 모양: 가로 꽉차고 높이는 10px*/
+  }
+  section{
+    margin: 0;
+  }
+  .list li{
+    width: 100%;
+
+  }
+  .inner{
+   display: table;
+   table-layout: fixed;
+   width: 100%;
+   margin: 0;
+   border: none;
+   border-top: 1px solid #000;
+  }
+  .thumb{
+    display: table-cell;
+    width: 100px;
+  }
+  .title{
+    display: table-cell;
+    position: relative;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    vertical-align: middle;
+    background: #fff;
+    color: #000;
+    padding: 8px;
+    /* 말줄임 풀기*/
+    overflow: inherit;
+    text-overflow: inherit;
+    white-space: inherit;
+    text-align: left;
+  }
+}
