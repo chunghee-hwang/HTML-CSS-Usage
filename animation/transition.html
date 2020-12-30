@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition</title>
+  <style>
+    a {
+      /* 초기 상태 */
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      line-height: 100px;
+      text-align: center;
+      color: #fff;
+      background-color: blue;
+    }
+
+    a:hover {
+      /* 종료 상태, hover 발생 시 적용됨 */
+      height: 200px;
+      line-height: 200px;
+      color: #fff;
+      background-color: Red;
+    }
+
+    .box1 {
+      /* 트랜지션 속성 개별 선언 */
+      transition-property: background-color, height, line-height;
+      transition-duration: .5s, 1s;
+      transition-timing-function: linear, ease, ease;
+      transition-delay: .5s, 0s, .5s;
+    }
+
+    .box2 {
+      /* Q. 트랜지션을 속기형으로 작성해보세요. */
+      transition: background-color .5s linear .5s, height 1s, line-height .5s .5s;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="box1">box1</a>
+  <a href="#" class="box2">box2</a>
+</body>
+
+</html>

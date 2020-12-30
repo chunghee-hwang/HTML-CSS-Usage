@@ -1,6 +1,7 @@
 # HTML-CSS-Usage
-
-[부스트코스 - 웹 UI 개발 > 3.HTML&CSS 활용](https://www.edwith.org/boostcourse-ui/joinLectures/19157) 챕터 코드를 정리한 레포지토리입니다.
+다음은 부스트코스 - 웹 UI 개발의 강의 코드를 정리한 레포지토리입니다.
+* [HTML&CSS 활용](https://www.boostcourse.org/web344/joinLectures/19157) 
+* [참고학습. CSS애니메이션](https://www.boostcourse.org/web344/joinLectures/28696)
 
 ## 코드 목록
 * [CSS 리셋](./css-reset/reset.css)
@@ -31,4 +32,6 @@
   - [파일 찾기](./form/file.html)
   - [SELECT 메뉴](./form/select.html)
 * [반응형 웹](./responsive/responsive.html)
-  
+* 애니메이션
+  - [Transition](./animation/transition.html)
+  - [Animation](./animation/animation.html)
