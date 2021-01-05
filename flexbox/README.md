@@ -2,15 +2,22 @@
 
 드림코딩 by 엘리의 [CSS Flexbox 완전 정리](https://www.youtube.com/watch?v=7neASrWEFEM)를 보고 정리한 코드입니다.
 
+## 중심축과 반대축 ( Main Axis and Cross Axis)
+
+- 수직선과 수평선이 있다.
+- 중심축이 수평선이면 반대축은 수직선, 중심축이 수직선이면 반대축은 수평선이다.
+- 축에 맞춰서 item들이 정렬된다.
+
 ## Container에 적용할 수 있는 속성
 
 - display
   ```css
   display: flex;
   ```
+  컨테이너의 display를 flex로 지정한다.
 - flex-direction
   ```css
-  flex-direction: row;
+  flex-direction: row; /*기본값*/
   ```
   flex의 방향(중심축)을 지정한다.
   - row: 열 방향(기본값)
@@ -18,13 +25,17 @@
   - column: 행 방향
   - column-reverse: 아이템 순서를 거꾸로 바꾼 행 방향
 - flex-wrap
+
   ```css
-  flex-wrap: nowrap;
-  행/열에 아이템을 어떻게 나열할 것인지 방법을 지정한다.
+  flex-wrap: nowrap; /*기본값*/
   ```
+
+  행/열에 아이템을 어떻게 나열할 것인지 방법을 지정한다.
+
   - nowrap: 아이템들이 한 줄에 꽉 차게 되도 모두 한 줄에 표현한다.(기본값)
   - wrap: 아이템들이 한 줄에 꽉 차면 자동으로 넘친 아이템들이 다음 행/열로 넘어간다.
   - wrap-reverse: wrap과 동일하나 넘친 아이템들이 거꾸로 배치된다.
+
 - flex-flow
   ```css
   flex-flow: column nowrap;
@@ -48,8 +59,11 @@
     - space-between: 가장 왼쪽/상단/오른쪽/하단 간격은 0이고 중간 간격만 동일하다.
 
 - align-content
+  ```css
+  align-content: space-between;
+  ```
   **반대축**을 기준으로 아이템들을 어떻게 배치할지 지정한다.
-  - flex-around
+  - flex-start
   - flex-end
   - center
   - space-around
@@ -117,12 +131,6 @@
 
   컨테이너 레벨에서 justify-content, align-items, align-content를 통해  
   모든 아이템들을 배치했다면, align-self를 통해서 반대축을 기준으로 **아이템 별로** 정렬할 수 있다.
-
-## 중심축과 반대축 ( Main Axis and Cross Axis)
-
-- 수직선과 수평선이 있다.
-- 중심축이 수평선이면 반대축은 수직선, 중심축이 수직선이면 반대축은 수평선이다.
-- 축에 맞춰서 item들이 정렬된다.
 
 ## Flexbox 연습해보기
 
