@@ -11,7 +11,7 @@ HTML, CSS 활용 방법 레포지토리입니다.
 ## 코드 목록
 
 - [CSS 리셋](./css-reset/reset.css)
-- [Flexbox](./flexbox/flexbox.html)
+- [Flexbox](./flexbox)
 - [Image Replacement 기법](./IR)
 - 레이아웃
   - [1단 레이아웃](./layout/1단레이아웃.html)
